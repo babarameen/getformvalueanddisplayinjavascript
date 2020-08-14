@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        text-align: center;
+        background-color: gray;
+        margin: auto;
+    }
+    
+    input{
+        width: 50vh;
+        height: 4vh;
+    }
+    div{
+        background-color: white;
+        width: 50%;
+        text-align: center;
+        margin: auto;
+    }
+</style>
+<body>
+    
+        <input type="text" value="First Name" id="f1"><br>
+        <input type="text" value="Father Name" id="fn"><br>
+        <input type="number" value="01" id="num" ><br>
+        <input type="email" value="example@email.com" id="email"><br>
+        <input type="text" value="+92300-1234567" id="p_num"><br>
+        <button onclick="f_text()">Submit</button>
+    
+    <div id="f-text"></div>
+</body>
+<script>
+    function f_text(){
+        var f1=document.getElementById("f1").value;
+        var fn=document.getElementById("fn").value;
+        var num=document.getElementById("num").value;
+        var email=document.getElementById("email").value;
+        var p_num=document.getElementById("p_num").value;
+        document.getElementById("f-text").innerHTML=`<h1>First Name:${f1}</h1>
+        <h1>Father Name:${fn}</h1>
+        <h1>Age:${num}</h1>
+        <h1>Email:${email}</h1>
+        <h1>Phone Number:${p_num}</h1>`;
+    }
+</script>
+</html>
